@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallbox mit PV-Überschussladen: So lädst du gratis mit Sonnenstrom — Ladestation Zuhause</title>
+  <meta name="description" content="Mit PV-Überschussladen tankst du gratis mit eigenem Sonnenstrom. Wie es funktioniert, welche Wallboxen es können und was du beachten musst.">
+  <link rel="canonical" href="https://lade-station-zuhause.de/blog/wallbox-pv-ueberschussladen.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Wallbox mit PV-Überschussladen: So lädst du gratis mit Sonnenstrom">
+  <meta property="og:description" content="Mit PV-Überschussladen tankst du gratis mit eigenem Sonnenstrom. Wie es funktioniert, welche Wallboxen es können und was du beachten musst.">
+  <meta property="og:url" content="https://lade-station-zuhause.de/blog/wallbox-pv-ueberschussladen.html">
+  <meta property="og:site_name" content="Ladestation Zuhause">
+  <meta property="article:published_time" content="2026-04-10">
+  <meta property="article:author" content="Aleksej Debus">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Schema.org Article + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Wallbox mit PV-Überschussladen: So lädst du gratis mit Sonnenstrom",
+        "description": "Mit PV-Überschussladen tankst du gratis mit eigenem Sonnenstrom. Wie es funktioniert, welche Wallboxen es können und was du beachten musst.",
+        "url": "https://lade-station-zuhause.de/blog/wallbox-pv-ueberschussladen.html",
+        "datePublished": "2026-04-10",
+        "dateModified": "2026-04-10",
+        "author": {
+          "@type": "Person",
+          "name": "Aleksej Debus"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ladestation Zuhause",
+          "url": "https://lade-station-zuhause.de"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ab wie viel Kilowatt PV-Leistung lohnt sich Überschussladen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Als Faustregel: Ab 5–7 kWp PV-Leistung hast du im Sommer regelmäßig nennenswerte Überschüsse. Mit einer 1-phasig regelbaren Wallbox (Mindestlast 1,4 kW) kannst du schon ab kleinen Überschüssen laden. Unter 4 kWp wird es dünn — dann lohnt sich eine Smart-Wallbox nur eingeschränkt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Brauche ich einen Energiemanager oder reicht die Wallbox allein?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Das hängt von der Wallbox ab. Der Fronius Wattpilot und der go-eCharger HOMEfix können PV-Überschussladen nativ — ohne separaten Energiemanager, sofern du den passenden Wechselrichter hast. Andere Wallboxen wie KEBA oder Easee brauchen zwingend einen externen Energiemanager."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was passiert, wenn der PV-Überschuss während der Fahrt wegfällt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die Wallbox drosselt die Ladeleistung dynamisch — bis auf das Minimum (1,4 kW bei 1-Phasen-Betrieb). Fällt die PV-Erzeugung komplett weg, pausiert manche Systeme die Ladung oder laden mit Mindestleistung weiter. Das Ergebnis ist stets abrechenbar: Der Rest kommt dann aus dem Netz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann ich PV-Überschussladen mit einem Speicher kombinieren?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, aber es braucht eine kluge Prioritätenlogik: Entweder lädt zuerst der Speicher, dann das Auto — oder umgekehrt. Das hängt vom Energiemanager ab. openWB unterstützt solche Szenarien sehr flexibel. Einfachere Systeme laden nach fester Regel."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="lz-nav lz-nav--scrolled" aria-label="Hauptnavigation">
+    <div class="lz-nav__inner">
+      <a href="../index.html" class="lz-nav__logo">Lade<span class="lz-nav__logo-mark">Station</span></a>
+      <button class="lz-nav__toggle" aria-label="Menü öffnen" aria-expanded="false"><span class="lz-nav__toggle-bars"></span></button>
+      <ul class="lz-nav__menu" role="menu">
+        <li><a href="../index.html#konfigurator" class="lz-nav__link">Konfigurator</a></li>
+        <li><a href="../index.html#vergleich" class="lz-nav__link">Wallboxen</a></li>
+        <li><a href="../index.html#ratgeber" class="lz-nav__link">Ratgeber</a></li>
+        <li><a href="../blog.html" class="lz-nav__link lz-nav__link--active">Blog</a></li>
+        <li><a href="../ueber-uns.html" class="lz-nav__link">Über uns</a></li>
+        <li><a href="../index.html#konfigurator" class="lz-btn lz-btn--primary lz-btn--sm lz-nav__cta">Konfigurator starten</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="lz-page-hero">
+    <div class="lz-page-hero__inner">
+      <span class="lz-overline">PV &amp; Laden</span>
+      <h1 class="lz-page-hero__title">Wallbox mit PV-Überschussladen:<br>So funktioniert's</h1>
+      <p class="lz-page-hero__sub">Eigener Sonnenstrom statt teurem Netzstrom — wenn Wallbox und PV-Anlage richtig zusammenarbeiten, lädst du faktisch kostenlos.</p>
+      <p class="lz-small" style="margin-top: 20px;">
+        <span>10. April 2026</span>
+        &nbsp;·&nbsp;
+        <span>ca. 10 Min. Lesezeit</span>
+        &nbsp;·&nbsp;
+        <span>von Aleksej Debus</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Inhalt -->
+  <section class="lz-section">
+    <div class="lz-container lz-container--sm">
+
+      <!-- Affiliate-Disclaimer -->
+      <div class="lz-disclaimer">
+        Transparenz: Wir verdienen an qualifizierten Käufen über die Amazon-Links auf dieser Seite. Das beeinflusst unsere Bewertung nicht — wir empfehlen nur Wallboxen, die wir selbst recherchiert haben.
+      </div>
+
+      <div class="lz-prose">
+
+        <!-- Antwort-Box -->
+        <div class="lz-disclaimer lz-disclaimer--inline" style="background: var(--lz-accent-subtle); border-color: var(--lz-accent-muted); margin-bottom: 2em;">
+          <strong>Kurze Antwort:</strong> PV-Überschussladen bedeutet, dass die Wallbox nur dann lädt — oder mit mehr Leistung lädt — wenn deine PV-Anlage mehr produziert als das Haus gerade verbraucht. Überschüssiger Sonnenstrom fließt ins Auto statt ins Netz. Ergebnis: faktisch kostenloser Strom, solange die Sonne scheint.
+        </div>
+
+        <h2>Wie funktioniert PV-Überschussladen technisch?</h2>
+
+        <p>Das Prinzip ist einfacher als es klingt. Ein Energiemanager — das kann die Wallbox selbst sein, der Wechselrichter oder eine separate Box — liest permanent den Einspeisezähler aus. Er misst also: Wie viel Strom fließt gerade <em>aus</em> dem Netz rein? Oder wie viel fließt <em>ins</em> Netz raus?</p>
+
+        <p>Gibt es einen Überschuss — die PV produziert mehr als Kühlschrank, Waschmaschine und Fernseher zusammen verbrauchen — schickt der Energiemanager ein Signal an die Wallbox: "Mehr Power." Die Wallbox erhöht die Ladeleistung. Fällt die Erzeugung, wird sie gedrosselt.</p>
+
+        <p>Das Ganze passiert laufend, meist im 1-Sekunden-Takt oder schneller. Dein Auto merkt davon nichts — es lädt einfach langsamer oder schneller.</p>
+
+        <h3>Der Haken: Mindestladeleistung</h3>
+
+        <p>Hier liegt die erste Einschränkung. Jede Wallbox hat eine Mindestladeleistung. Bei dreiphasiger Ladung sind das typischerweise <strong>6 Ampere pro Phase × 3 Phasen × 230 Volt = rund 4,1 kW</strong>. Das ist das absolute Minimum, unter das eine dreiphasige Wallbox nicht kann.</p>
+
+        <p>Für kleinere PV-Anlagen ist das ein Problem: Wenn du im Herbst nachmittags nur 2 kW Überschuss hast, kann die dreiphasige Wallbox trotzdem nicht anfangen zu laden. Das Auto wartet.</p>
+
+        <p>Besser aufgestellt bist du mit einer <strong>einphasig regelbaren Wallbox</strong>. 6 Ampere × 1 Phase × 230 Volt = rund 1,4 kW Mindestlast. Damit lässt sich schon ein kleiner Sonnen-Überschuss nutzen — auch im Oktober.</p>
+
+        <h2>Welche Wallboxen können PV-Überschussladen?</h2>
+
+        <p>Nicht jede Wallbox kann das. Und "kann PV-Überschussladen" ist keine Binärfrage — es gibt große Qualitätsunterschiede:</p>
+
+        <table style="width:100%; border-collapse: collapse; margin: 1.5em 0; font-size: 15px;">
+          <thead>
+            <tr style="background: var(--lz-bg-subtle); text-align: left;">
+              <th style="padding: 10px 12px; border: 1px solid var(--lz-border);">Wallbox</th>
+              <th style="padding: 10px 12px; border: 1px solid var(--lz-border);">PV-Tauglichkeit</th>
+              <th style="padding: 10px 12px; border: 1px solid var(--lz-border);">Besonderheit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">openWB</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>10/10</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Open Source, unterstützt jeden WR, maximale Flexibilität</td>
+            </tr>
+            <tr style="background: var(--lz-bg-alt);">
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Fronius Wattpilot</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>9/10</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Nativ perfekt mit Fronius-WR, auch solo per CT-Clamp</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">go-eCharger HOMEfix</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>8/10</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Offene API, Eco-Modus nativ, günstigster Einstieg</td>
+            </tr>
+            <tr style="background: var(--lz-bg-alt);">
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Easee Home</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>6/10</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Nur über Cloud-OCPP, Latenz kann Thema sein</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">KEBA P30</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>5/10</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Nur mit separatem Energiemanager, kein Standalone-PV</td>
+            </tr>
+            <tr style="background: var(--lz-bg-alt);">
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Heidelberg Home Eco</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>—</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Keine PV-Funktion. Sehr gut, aber nur für reines Laden</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">ABL eMH1</td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);"><strong>—</strong></td>
+              <td style="padding: 10px 12px; border: 1px solid var(--lz-border);">Keine PV-Funktion. Solides Arbeitstier ohne Smart-Features</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Heidelberg und ABL sind keine schlechten Wallboxen — im Gegenteil. Aber wenn du PV hast und die nutzen willst, sind sie die falsche Wahl.</p>
+
+        <h2>Was brauchst du für PV-Überschussladen?</h2>
+
+        <p>Es gibt zwei Wege zum gleichen Ziel:</p>
+
+        <h3>Weg 1: Wallbox mit nativem PV-Support</h3>
+
+        <p>Fronius Wattpilot und go-eCharger HOMEfix können den PV-Überschuss selbst berechnen — wenn sie die nötigen Messdaten bekommen. Dafür brauchst du:</p>
+
+        <ul>
+          <li>PV-Anlage mit Energiemessung (Wechselrichter mit Datenschnittstelle oder externer Stromzähler/CT-Clamp am Hausanschluss)</li>
+          <li>Kompatiblen Wechselrichter — Fronius, SMA, Kostal, Sungrow, Huawei haben alle offene Schnittstellen</li>
+          <li>Die jeweilige Wallbox-App zur Einrichtung</li>
+        </ul>
+
+        <h3>Weg 2: Externer Energiemanager</h3>
+
+        <p>Mit einem dedizierten Energiemanager (openWB-Software, SMA Energy Manager, Loxone, Solarfox) hast du die meiste Flexibilität. Hier kannst du nahezu jede steuerbare Wallbox einbinden und auch Speicher, Wärmepumpe und andere Verbraucher koordinieren.</p>
+
+        <p>Das ist der richtige Weg, wenn du mehr als nur eine Wallbox steuern willst — oder wenn deine Wallbox selbst keine PV-Intelligenz mitbringt.</p>
+
+        <h2>Lohnt sich's rechnerisch?</h2>
+
+        <p>Nehmen wir eine realistische Beispiel-Situation:</p>
+
+        <ul>
+          <li>PV-Anlage: 10 kWp</li>
+          <li>Eigenverbrauch Haushalt: 4.000 kWh/Jahr</li>
+          <li>PV-Erzeugung: ca. 9.500 kWh/Jahr</li>
+          <li>Überschuss (vor Auto): rund 5.500 kWh/Jahr</li>
+          <li>Davon ca. 50% als Ladeüberschuss nutzbar: 2.750 kWh</li>
+          <li>Haushaltsstrom: 32 Cent/kWh</li>
+        </ul>
+
+        <p>2.750 kWh × 0,32 € = <strong>880 € gespart pro Jahr</strong> gegenüber dem Laden mit Netzstrom. Selbst konservativ gerechnet — 40% Nutzungsgrad, 28 Cent/kWh — landen wir bei rund 300–400 € jährlich.</p>
+
+        <p>Die Mehrkosten für eine Smart-Wallbox gegenüber einer einfachen Lösung liegen bei 100–250 €. Das hat sich in der Regel nach einer Heizperiode amortisiert. Kein schlechtes Geschäft.</p>
+
+        <p>Wichtig: Das funktioniert nur, wenn du das Auto tagsüber laden kannst — also Homeoffice, flexible Arbeitszeiten oder ein zweites Fahrzeug im Haushalt. Wer das Auto morgens um 7 Uhr vollgeladen braucht und abends um 18 Uhr heimkommt, kann kaum PV-Überschuss nutzen.</p>
+
+        <h2>Fazit: Welche Wallbox, wenn ich PV habe?</h2>
+
+        <p>Das hängt von deinem Wechselrichter-Hersteller und deiner technischen Affinität ab:</p>
+
+        <ul>
+          <li><strong>Du hast einen Fronius-Wechselrichter?</strong> Dann ist der Fronius Wattpilot die naheliegendste Wahl. Die Integration ist makellos, keine Bastelei.</li>
+          <li><strong>Du willst maximale Kontrolle und bist technisch fit?</strong> openWB ist das Schweizer Taschenmesser unter den Wallboxen. Raspi-basiert, Open Source, unterstützt buchstäblich jeden Wechselrichter.</li>
+          <li><strong>Du willst es pragmatisch und günstig?</strong> Der go-eCharger HOMEfix hat einen eingebauten Eco-Modus, eine brauchbare API und kostet deutlich weniger als die Konkurrenz.</li>
+        </ul>
+
+        <p>Wenn du keine PV hast oder dir die Smart-Funktionen egal sind — Heidelberg Home Eco oder ABL eMH1 sind zuverlässiger und preiswerter. Kauf keine Smart-Wallbox, wenn du das "Smart" nie nutzt.</p>
+
+        <h3>Weiterführende Artikel</h3>
+        <p>
+          Noch nicht sicher, welche Wallbox grundsätzlich passt? Schau in unsere
+          <a href="../blog/wallbox-kaufberatung-2026.html">Wallbox-Kaufberatung 2026</a>.
+          Wenn du zwischen go-eCharger, Heidelberg und ABL abwägst,
+          hilft unser <a href="../blog/go-e-vs-heidelberg-vs-abl.html">direkter Vergleich dieser drei Modelle</a>.
+        </p>
+
+        <!-- FAQ -->
+        <h2>Häufige Fragen zum PV-Überschussladen</h2>
+
+      </div><!-- /.lz-prose -->
+
+      <div class="lz-faq">
+
+        <details class="lz-faq__item">
+          <summary class="lz-faq__question">Ab wie viel Kilowatt PV-Leistung lohnt sich Überschussladen?</summary>
+          <div class="lz-faq__answer">
+            <p>Als Faustregel: Ab 5–7 kWp PV-Leistung hast du im Sommer regelmäßig nennenswerte Überschüsse. Mit einer 1-phasig regelbaren Wallbox (Mindestlast 1,4 kW) kannst du schon ab kleinen Überschüssen laden. Unter 4 kWp wird es dünn — dann lohnt sich eine Smart-Wallbox nur eingeschränkt.</p>
+          </div>
+        </details>
+
+        <details class="lz-faq__item">
+          <summary class="lz-faq__question">Brauche ich einen Energiemanager oder reicht die Wallbox allein?</summary>
+          <div class="lz-faq__answer">
+            <p>Das hängt von der Wallbox ab. Der Fronius Wattpilot und der go-eCharger HOMEfix können PV-Überschussladen nativ — ohne separaten Energiemanager, sofern du den passenden Wechselrichter hast. Andere Wallboxen wie KEBA oder Easee brauchen zwingend einen externen Energiemanager.</p>
+          </div>
+        </details>
+
+        <details class="lz-faq__item">
+          <summary class="lz-faq__question">Was passiert, wenn der PV-Überschuss während der Fahrt wegfällt?</summary>
+          <div class="lz-faq__answer">
+            <p>Die Wallbox drosselt die Ladeleistung dynamisch — bis auf das Minimum (1,4 kW bei 1-Phasen-Betrieb). Fällt die PV-Erzeugung komplett weg, pausiert das System die Ladung oder lädt mit Mindestleistung weiter. Der Rest kommt dann aus dem Netz — das ist abrechenbar und normal.</p>
+          </div>
+        </details>
+
+        <details class="lz-faq__item">
+          <summary class="lz-faq__question">Kann ich PV-Überschussladen mit einem Hausakku kombinieren?</summary>
+          <div class="lz-faq__answer">
+            <p>Ja, aber es braucht eine Prioritätenlogik: Entweder lädt zuerst der Speicher, dann das Auto — oder umgekehrt. Das hängt vom Energiemanager ab. openWB unterstützt solche Szenarien sehr flexibel. Einfachere Systeme laden nach fester Regel, ohne dynamische Abwägung.</p>
+          </div>
+        </details>
+
+      </div><!-- /.lz-faq -->
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--lz-border);">
+        <p class="lz-lead" style="margin-bottom: 20px;">Unsicher, welche Wallbox zu deiner PV-Anlage passt?</p>
+        <a href="../index.html#konfigurator" class="lz-btn lz-btn--primary">Konfigurator starten — kostenlos &amp; ohne Anmeldung</a>
+        <p class="lz-small" style="margin-top: 12px;">Beantworte 5 Fragen, bekomme 3 konkrete Empfehlungen.</p>
+      </div>
+
+    </div><!-- /.lz-container -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="lz-footer">
+    <div class="lz-footer__inner">
+      <div class="lz-footer__grid">
+        <div>
+          <div class="lz-footer__brand">Lade<span class="lz-footer__brand-mark">Station</span></div>
+          <p class="lz-footer__tagline">Wallbox-Beratung ohne Verkäufer-Sprüche.</p>
+          <p class="lz-footer__disclaimer">Transparenz: Wir verdienen an qualifizierten Käufen über Amazon-Links. Das beeinflusst unsere Bewertung nicht.</p>
+        </div>
+        <div>
+          <p class="lz-footer__heading">Seiten</p>
+          <ul class="lz-footer__links">
+            <li><a href="../index.html#konfigurator">Konfigurator</a></li>
+            <li><a href="../index.html#vergleich">Wallboxen</a></li>
+            <li><a href="../index.html#ratgeber">Ratgeber</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="lz-footer__heading">Über</p>
+          <ul class="lz-footer__links">
+            <li><a href="../ueber-uns.html">Über uns</a></li>
+            <li><a href="../ueber-uns.html#methodik">Bewertungsmethodik</a></li>
+            <li><a href="../kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="lz-footer__heading">Rechtliches</p>
+          <ul class="lz-footer__links">
+            <li><a href="../impressum.html">Impressum</a></li>
+            <li><a href="../datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lz-footer__bottom">
+        <p>© 2026 Ladestation Zuhause · Aleksej Debus, Kitzingen</p>
+        <p>Stand: 10. April 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../nav.js"></script>
+  <script src="../cookie.js" defer></script>
+</body>
+</html>
