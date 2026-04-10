@@ -1,0 +1,8 @@
+# Cloudflare Pages Redirects
+# Format: https://developers.cloudflare.com/pages/configuration/redirects/
+# Hinweis: Nur relative URLs erlaubt. WWW→Apex wird über Cloudflare DNS-CNAME gelöst.
+
+# Alte URLs (Platzhalter für spätere Migrationen)
+# /alt-url /neu-url 301
+
+# 404-Handling: Cloudflare erkennt 404.html automatisch — kein Eintrag nötig.

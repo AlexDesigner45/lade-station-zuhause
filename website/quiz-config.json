@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "niche": "Wallbox",
+    "version": "1.0",
+    "lastUpdated": "2026-04-10",
+    "totalQuestions": 15,
+    "sections": 5
+  },
+  "intro": {
+    "title": "Finde die passende Wallbox für dein Zuhause",
+    "sub": "15 Fragen in 5 Abschnitten — kein Elektrik-Studium nötig. Am Ende bekommst du 3 Wallboxen, die zu deinem Auto, deinem Haus und deinem Budget passen.",
+    "stats": [
+      { "value": "15", "label": "Fragen" },
+      { "value": "~3 Min", "label": "Dauer" },
+      { "value": "8", "label": "Modelle im Pool" }
+    ],
+    "cta": "Konfigurator starten"
+  },
+  "result": {
+    "title": "Das passt zu deinem Zuhause",
+    "sub": "Nach deinen Anforderungen gefiltert und nach Passung sortiert.",
+    "fallbackTitle": "Kein perfekter Treffer — aber hier sind die nächstbesten",
+    "fallbackSub": "Deine Anforderungen sind speziell. Diese Wallboxen erfüllen die meisten, aber nicht alle Kriterien. Die fehlenden zeigen wir dir ehrlich an."
+  },
+  "sections": [
+    { "id": "fahrzeug",       "title": "Dein Fahrzeug",         "from": 1,  "to": 3 },
+    { "id": "zuhause",        "title": "Dein Zuhause",          "from": 4,  "to": 7 },
+    { "id": "anforderungen",  "title": "Anforderungen",         "from": 8,  "to": 11 },
+    { "id": "budget",         "title": "Budget & Prio",         "from": 12, "to": 13 },
+    { "id": "extras",         "title": "Extras",                "from": 14, "to": 15 }
+  ],
+  "questions": [
+    {
+      "id": "fahrzeug",
+      "meta": "Frage 1 von 15 · Abschnitt 1 — Dein Fahrzeug",
+      "text": "Welches E-Auto fährst du oder planst du?",
+      "columns": 3,
+      "options": [
+        { "label": "Tesla",                    "desc": "Model 3, Y, S, X",              "icon": "car-tesla",   "weights": { "smart": 1, "power": 1 } },
+        { "label": "VW / Audi / Škoda",        "desc": "ID-Serie, e-tron, Enyaq etc.",  "icon": "car-vag",     "weights": { "zuverlaessig": 1 } },
+        { "label": "BMW / Mercedes",           "desc": "iX, i4, EQA, EQS etc.",         "icon": "car-premium", "weights": { "smart": 1, "power": 1 } },
+        { "label": "Hyundai / Kia",            "desc": "Ioniq, EV6, Niro etc.",         "icon": "car-korea",   "weights": { "zuverlaessig": 1 } },
+        { "label": "Renault / Peugeot / Opel", "desc": "Megane, e-208, Corsa-e etc.",   "icon": "car-france",  "weights": { "budget": 1 } },
+        { "label": "Anderes / Weiß noch nicht","desc": "Noch keine Entscheidung",       "icon": "car-other",   "weights": {} }
+      ]
+    },
+    {
+      "id": "fahrleistung",
+      "meta": "Frage 2 von 15 · Abschnitt 1 — Dein Fahrzeug",
+      "text": "Wie viel fährst du pro Tag im Schnitt?",
+      "columns": 3,
+      "options": [
+        { "label": "Bis 30 km",   "desc": "Kurzstrecke, Stadt",          "icon": "range-short", "weights": { "budget": 2 } },
+        { "label": "30–80 km",    "desc": "Pendler, normal",             "icon": "range-mid",   "weights": { "power": 1 } },
+        { "label": "Über 80 km",  "desc": "Vielfahrer, Außendienst",     "icon": "range-long",  "weights": { "power": 3 } }
+      ]
+    },
+    {
+      "id": "ladeort",
+      "meta": "Frage 3 von 15 · Abschnitt 1 — Dein Fahrzeug",
+      "text": "Lädst du auch am Arbeitsplatz oder nur zuhause?",
+      "columns": 3,
+      "options": [
+        { "label": "Nur zuhause",            "desc": "Wallbox ist Hauptlademöglichkeit", "icon": "charge-home",   "weights": { "power": 2, "zuverlaessig": 1 } },
+        { "label": "Manchmal woanders",      "desc": "Gelegentlich Arbeit/öffentlich",   "icon": "charge-mixed",  "weights": {} },
+        { "label": "Hauptsächlich woanders",  "desc": "Zuhause nur ergänzend",            "icon": "charge-away",   "weights": { "budget": 2 } }
+      ]
+    },
+    {
+      "id": "wohnsituation",
+      "meta": "Frage 4 von 15 · Abschnitt 2 — Dein Zuhause",
+      "text": "Wie ist deine Wohnsituation?",
+      "columns": 4,
+      "options": [
+        { "label": "Eigenheim EFH",          "desc": "Einfamilienhaus",                "icon": "home-efh",    "weights": { "power": 1 } },
+        { "label": "Doppelhaushälfte",        "desc": "Eigentum, geteilte Infrastruktur","icon": "home-dhh",   "weights": { "lastmgmt": 1 } },
+        { "label": "Eigentumswohnung",        "desc": "Mit eigenem Stellplatz",         "icon": "home-etw",    "weights": { "lastmgmt": 2, "smart": 1 } },
+        { "label": "Miete mit Stellplatz",    "desc": "Vermieter-Genehmigung nötig",    "icon": "home-miete",  "weights": { "budget": 2, "lastmgmt": 1 } }
+      ]
+    },
+    {
+      "id": "pv-anlage",
+      "meta": "Frage 5 von 15 · Abschnitt 2 — Dein Zuhause",
+      "text": "Hast du eine Photovoltaik-Anlage?",
+      "columns": 4,
+      "options": [
+        { "label": "Nein",              "desc": "Kein PV",                     "icon": "pv-no",       "weights": {} },
+        { "label": "Ja, ohne Speicher", "desc": "PV-Überschuss geht ins Netz", "icon": "pv-nostorage","weights": { "pv": 4 } },
+        { "label": "Ja, mit Speicher",  "desc": "Batterie vorhanden",          "icon": "pv-storage",  "weights": { "pv": 5, "smart": 2 } },
+        { "label": "Geplant",           "desc": "PV kommt bald",               "icon": "pv-planned",  "weights": { "pv": 2, "smart": 1 } }
+      ]
+    },
+    {
+      "id": "leitungslaenge",
+      "meta": "Frage 6 von 15 · Abschnitt 2 — Dein Zuhause",
+      "text": "Wie weit ist der Sicherungskasten vom Stellplatz entfernt?",
+      "columns": 4,
+      "options": [
+        { "label": "Unter 10 m",  "desc": "Garage direkt am Haus",      "icon": "dist-short", "weights": {} },
+        { "label": "10–20 m",     "desc": "Etwas Kabelweg nötig",       "icon": "dist-mid",   "weights": { "budget": -1 } },
+        { "label": "Über 20 m",   "desc": "Langer Kabelweg, teurer",    "icon": "dist-long",  "weights": { "budget": -2 } },
+        { "label": "Weiß nicht",  "desc": "Muss Elektriker klären",     "icon": "dist-unknown","weights": {} }
+      ]
+    },
+    {
+      "id": "absicherung",
+      "meta": "Frage 7 von 15 · Abschnitt 2 — Dein Zuhause",
+      "text": "Welche Absicherung hat dein Hausanschluss?",
+      "columns": 4,
+      "options": [
+        { "label": "Weiß nicht",       "desc": "Muss geprüft werden",        "icon": "amp-unknown", "weights": {} },
+        { "label": "35A oder weniger",  "desc": "Altbau, klein",              "icon": "amp-35",      "weights": { "lastmgmt": 3, "power": -2 } },
+        { "label": "50A",               "desc": "Standard-Neubau",            "icon": "amp-50",      "weights": { "power": 1 } },
+        { "label": "63A oder mehr",     "desc": "Großzügig dimensioniert",    "icon": "amp-63",      "weights": { "power": 3 } }
+      ]
+    },
+    {
+      "id": "anschlusstyp",
+      "meta": "Frage 8 von 15 · Abschnitt 3 — Anforderungen",
+      "text": "Brauchst du ein fest angeschlagenes Kabel oder eine Buchse?",
+      "columns": 3,
+      "options": [
+        { "label": "Festes Kabel",       "desc": "Einstecken, fertig",          "icon": "plug-fixed",  "weights": { "kabel": 4 } },
+        { "label": "Buchse (Steckdose)", "desc": "Eigenes Ladekabel nutzen",    "icon": "plug-socket", "weights": { "kabel": -2 } },
+        { "label": "Egal",               "desc": "Beides okay",                 "icon": "plug-any",    "weights": {} }
+      ]
+    },
+    {
+      "id": "montageort",
+      "meta": "Frage 9 von 15 · Abschnitt 3 — Anforderungen",
+      "text": "Wo soll die Wallbox montiert werden?",
+      "columns": 3,
+      "options": [
+        { "label": "Garage / Carport",         "desc": "Geschützt, drinnen",           "icon": "mount-indoor",  "weights": {} },
+        { "label": "Außenwand / Freistehend",   "desc": "Wind und Wetter ausgesetzt",   "icon": "mount-outdoor", "weights": { "outdoor": 4 } },
+        { "label": "Beides möglich",            "desc": "Noch nicht festgelegt",         "icon": "mount-any",     "weights": { "outdoor": 1 } }
+      ]
+    },
+    {
+      "id": "smart-charging",
+      "meta": "Frage 10 von 15 · Abschnitt 3 — Anforderungen",
+      "text": "Wie wichtig ist dir Smart-Charging (App, Zeitsteuerung, PV-Überschuss)?",
+      "columns": 3,
+      "options": [
+        { "label": "Nicht wichtig",  "desc": "Einstecken reicht mir",         "icon": "smart-off", "weights": { "zuverlaessig": 2, "budget": 1 } },
+        { "label": "Nice-to-have",   "desc": "Zeitsteuerung wäre gut",        "icon": "smart-mid", "weights": { "smart": 2 } },
+        { "label": "Sehr wichtig",   "desc": "App, PV-Steuerung, Protokolle", "icon": "smart-on",  "weights": { "smart": 5, "pv": 2 } }
+      ]
+    },
+    {
+      "id": "lastmanagement",
+      "meta": "Frage 11 von 15 · Abschnitt 3 — Anforderungen",
+      "text": "Brauchst du Lastmanagement (mehrere Ladepunkte oder schwacher Hausanschluss)?",
+      "columns": 2,
+      "options": [
+        { "label": "Nein",                "desc": "Ein Auto, normaler Anschluss",  "icon": "load-no",  "weights": {} },
+        { "label": "Ja / Wahrscheinlich", "desc": "Mehrere Autos oder knappe Ampere","icon": "load-yes","weights": { "lastmgmt": 4, "smart": 2 } }
+      ]
+    },
+    {
+      "id": "budget",
+      "meta": "Frage 12 von 15 · Abschnitt 4 — Budget & Prio",
+      "text": "Wie viel Budget hast du für die Wallbox (ohne Installation)?",
+      "columns": 4,
+      "options": [
+        { "label": "Bis 500 €",      "desc": "Einstieg",        "icon": "euro-sm", "weights": { "budget": 5, "smart": -2, "pv": -2 }, "requires": { "budget_low": 3 } },
+        { "label": "500–800 €",      "desc": "Mittelklasse",    "icon": "euro-md", "weights": { "budget": 2 } },
+        { "label": "800–1.200 €",    "desc": "Oberklasse",      "icon": "euro-lg", "weights": { "smart": 2, "pv": 2 } },
+        { "label": "Über 1.200 €",   "desc": "Premium",         "icon": "euro-xl", "weights": { "smart": 3, "pv": 3, "budget": -3 } }
+      ]
+    },
+    {
+      "id": "prio",
+      "meta": "Frage 13 von 15 · Abschnitt 4 — Budget & Prio",
+      "text": "Was ist dir am wichtigsten?",
+      "columns": 4,
+      "options": [
+        { "label": "Günstiger Preis",           "desc": "Geld sparen",                   "icon": "prio-budget",   "weights": { "budget": 4 } },
+        { "label": "Zukunftssicherheit / Smart", "desc": "App, Updates, OCPP",             "icon": "prio-smart",    "weights": { "smart": 4, "lastmgmt": 1 } },
+        { "label": "Einfachheit / Zuverlässig",  "desc": "Stecker rein, lädt",             "icon": "prio-simple",   "weights": { "zuverlaessig": 4 } },
+        { "label": "PV-Integration",             "desc": "Eigenstrom optimal nutzen",      "icon": "prio-pv",       "weights": { "pv": 5, "smart": 2 } }
+      ]
+    },
+    {
+      "id": "marke",
+      "meta": "Frage 14 von 15 · Abschnitt 5 — Extras",
+      "text": "Hast du eine Marken-Präferenz?",
+      "columns": 3,
+      "options": [
+        { "label": "Egal",                        "desc": "Beste Technik zählt",          "icon": "brand-any",     "weights": {} },
+        { "label": "Deutsche Hersteller bevorzugt","desc": "ABL, Heidelberg, openWB",     "icon": "brand-deutsch", "weights": { "deutsch": 4 }, "requires": { "deutsch": 3 } },
+        { "label": "Kenne mich nicht aus",         "desc": "Vertraue der Empfehlung",     "icon": "brand-unsure",  "weights": { "zuverlaessig": 1 } }
+      ]
+    },
+    {
+      "id": "foerderung",
+      "meta": "Frage 15 von 15 · Abschnitt 5 — Extras",
+      "text": "Soll die Wallbox förderfähig sein (z.B. KfW, Landesprogramme)?",
+      "columns": 3,
+      "options": [
+        { "label": "Ja, unbedingt",  "desc": "Förderung ist mir wichtig",     "icon": "subsidy-yes",  "weights": { "smart": 2, "lastmgmt": 1 } },
+        { "label": "Wäre nice",      "desc": "Wenn es passt, gerne",          "icon": "subsidy-nice", "weights": { "smart": 1 } },
+        { "label": "Egal",           "desc": "Brauche keine Förderung",       "icon": "subsidy-no",   "weights": {} }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "heidelberg-home-eco",
+      "brand": "Heidelberg",
+      "name": "Home Eco",
+      "tagline": "Der Zuverlässige zum Einstiegspreis",
+      "price": "ca. 495 €",
+      "image": "",
+      "priceTier": "budget",
+      "specs": { "kw": "11 kW", "phasen": "3-phasig", "kabel": "Fest, 5m/7,5m", "schutz": "DC-Fehlerschutz integriert", "smart": "Nein", "ip": "IP54" },
+      "pros": ["Robust und bewährt", "DC-Fehlerschutz spart ca. 200 € beim FI", "Made in Germany"],
+      "cons": ["Keine App oder Smart-Features", "Nur 11 kW", "Kein Display"],
+      "scores": {
+        "budget": 8, "smart": 1, "pv": 0, "zuverlaessig": 9, "outdoor": 7, "deutsch": 9,
+        "power": 3, "lastmgmt": 0, "kabel": 8
+      },
+      "dealbreakers": { "smart_required": true, "pv_required": true, "22kw_required": true }
+    },
+    {
+      "id": "keba-p30-c",
+      "brand": "KEBA",
+      "name": "KeContact P30 c-series",
+      "tagline": "Der Premium-Allrounder mit voller Ausstattung",
+      "price": "ca. 999 €",
+      "image": "",
+      "priceTier": "mid-high",
+      "specs": { "kw": "22 kW", "phasen": "3-phasig", "kabel": "Fest, 6m", "schutz": "DC-Fehlerschutz integriert", "smart": "RFID, OCPP, LAN/WLAN", "ip": "IP54" },
+      "pros": ["22 kW Ladeleistung", "OCPP-fähig (zukunftssicher)", "Robuste Qualität"],
+      "cons": ["Höherer Preis", "App-Anbindung über OCPP-Backend nötig", "Design eher funktional"],
+      "scores": {
+        "budget": 4, "smart": 7, "pv": 5, "zuverlaessig": 9, "outdoor": 8, "deutsch": 8,
+        "power": 8, "lastmgmt": 6, "kabel": 8
+      },
+      "dealbreakers": { "budget_low": true }
+    },
+    {
+      "id": "go-echarger-homefix",
+      "brand": "go-e",
+      "name": "Charger HOMEfix",
+      "tagline": "Smart-Laden zum fairen Preis",
+      "price": "ca. 649 €",
+      "image": "",
+      "priceTier": "mid",
+      "specs": { "kw": "11 kW", "phasen": "3-phasig", "kabel": "Fest, 5m", "schutz": "DC-Fehlerschutz integriert", "smart": "App, API, MQTT, PV-Überschuss", "ip": "IP54" },
+      "pros": ["Beste App im Einstiegssegment", "PV-Überschussladen nativ", "Offene API für Bastler"],
+      "cons": ["Nur 11 kW", "Gehäuse-Verarbeitung diskutabel", "Kein OCPP"],
+      "scores": {
+        "budget": 7, "smart": 8, "pv": 8, "zuverlaessig": 6, "outdoor": 6, "deutsch": 7,
+        "power": 3, "lastmgmt": 3, "kabel": 7
+      },
+      "dealbreakers": { "22kw_required": true }
+    },
+    {
+      "id": "easee-home",
+      "brand": "Easee",
+      "name": "Home",
+      "tagline": "Skandinavisches Design trifft Lastmanagement",
+      "price": "ca. 849 €",
+      "image": "",
+      "priceTier": "mid-high",
+      "specs": { "kw": "22 kW", "phasen": "3-phasig", "kabel": "Buchse (Typ 2)", "schutz": "DC-Fehlerschutz integriert", "smart": "App, Cloud, Lastmanagement", "ip": "IP54" },
+      "pros": ["Dynamisches Lastmanagement serienmäßig", "Kompaktes Design", "Einfach erweiterbar (bis 3 Ladepunkte)"],
+      "cons": ["Cloud-abhängig", "Buchse statt festes Kabel", "Norwegischer Hersteller (Support)"],
+      "scores": {
+        "budget": 5, "smart": 8, "pv": 6, "zuverlaessig": 7, "outdoor": 7, "deutsch": 3,
+        "power": 8, "lastmgmt": 9, "kabel": 1
+      },
+      "dealbreakers": { "budget_low": true, "kabel_required": true }
+    },
+    {
+      "id": "wallbox-pulsar-plus",
+      "brand": "Wallbox",
+      "name": "Pulsar Plus",
+      "tagline": "Kompakt, smart und bezahlbar",
+      "price": "ca. 699 €",
+      "image": "",
+      "priceTier": "mid",
+      "specs": { "kw": "22 kW", "phasen": "3-phasig", "kabel": "Fest, 5m/7m", "schutz": "DC-Fehlerschutz integriert", "smart": "App, Bluetooth, WLAN, OCPP", "ip": "IP54" },
+      "pros": ["22 kW zum mittleren Preis", "Gute App", "OCPP für Lastmanagement"],
+      "cons": ["Spanischer Hersteller", "Kundenservice nicht immer erreichbar", "Kein integriertes Lastmanagement ohne Backend"],
+      "scores": {
+        "budget": 6, "smart": 7, "pv": 4, "zuverlaessig": 6, "outdoor": 7, "deutsch": 2,
+        "power": 8, "lastmgmt": 5, "kabel": 8
+      },
+      "dealbreakers": {}
+    },
+    {
+      "id": "abl-emh1",
+      "brand": "ABL",
+      "name": "eMH1",
+      "tagline": "Solide deutsche Wertarbeit, ohne Schnickschnack",
+      "price": "ca. 549 €",
+      "image": "",
+      "priceTier": "budget",
+      "specs": { "kw": "11 kW", "phasen": "3-phasig", "kabel": "Buchse (Typ 2)", "schutz": "DC-Fehlerschutz integriert", "smart": "Nein", "ip": "IP54" },
+      "pros": ["Made in Germany (Franken)", "Extrem robust", "ADAC-Testsieger"],
+      "cons": ["Keine Smart-Features", "Nur 11 kW", "Nur Buchse, kein festes Kabel"],
+      "scores": {
+        "budget": 7, "smart": 1, "pv": 0, "zuverlaessig": 9, "outdoor": 8, "deutsch": 10,
+        "power": 3, "lastmgmt": 0, "kabel": 1
+      },
+      "dealbreakers": { "smart_required": true, "pv_required": true, "22kw_required": true, "kabel_required": true }
+    },
+    {
+      "id": "openwb-series2",
+      "brand": "openWB",
+      "name": "Series 2",
+      "tagline": "Open-Source-Wallbox für PV-Optimierer",
+      "price": "ca. 1.199 €",
+      "image": "",
+      "priceTier": "premium",
+      "specs": { "kw": "22 kW", "phasen": "3-phasig", "kabel": "Fest, 5m/7,5m", "schutz": "DC-Fehlerschutz integriert", "smart": "openWB-Software, PV-Überschuss, MQTT, Modbus", "ip": "IP54" },
+      "pros": ["Beste PV-Integration am Markt", "Open-Source, volle Kontrolle", "Lastmanagement + Hausbatterie-Integration"],
+      "cons": ["Teuer", "Einrichtung technisch anspruchsvoll", "Design gewöhnungsbedürftig"],
+      "scores": {
+        "budget": 2, "smart": 9, "pv": 10, "zuverlaessig": 7, "outdoor": 7, "deutsch": 9,
+        "power": 8, "lastmgmt": 9, "kabel": 8
+      },
+      "dealbreakers": { "budget_low": true, "budget_mid": true }
+    },
+    {
+      "id": "fronius-wattpilot",
+      "brand": "Fronius",
+      "name": "Wattpilot Home",
+      "tagline": "Vom Wechselrichter-Profi — ideal mit Fronius-PV",
+      "price": "ca. 799 €",
+      "image": "",
+      "priceTier": "mid-high",
+      "specs": { "kw": "22 kW", "phasen": "3-phasig", "kabel": "Fest, 5m/7,5m", "schutz": "DC-Fehlerschutz integriert", "smart": "App, WLAN, PV-Überschuss (Fronius-nativ)", "ip": "IP65" },
+      "pros": ["Native PV-Integration mit Fronius-Wechselrichtern", "Gute App", "IP65 — voll wetterfest"],
+      "cons": ["PV-Optimierung am besten nur mit Fronius-WR", "Österreichischer Support", "Preis im Mittelfeld"],
+      "scores": {
+        "budget": 5, "smart": 7, "pv": 9, "zuverlaessig": 8, "outdoor": 9, "deutsch": 6,
+        "power": 8, "lastmgmt": 4, "kabel": 8
+      },
+      "dealbreakers": {}
+    }
+  ],
+  "reasons": {
+    "budget":        "gutes Preis-Leistungs-Verhältnis",
+    "smart":         "umfangreiche Smart-Features",
+    "pv":            "gute PV-Überschussladen-Integration",
+    "zuverlaessig":  "hohe Zuverlässigkeit und Einfachheit",
+    "outdoor":       "wetterfeste Outdoor-Tauglichkeit",
+    "deutsch":       "deutscher Hersteller",
+    "power":         "hohe Ladeleistung (22 kW)",
+    "lastmgmt":      "Lastmanagement-fähig",
+    "kabel":         "festes Ladekabel integriert"
+  },
+  "requireLabels": {
+    "budget_low":      "niedriges Budget (unter 500 €)",
+    "smart_required":  "Smart-Features (App, Zeitsteuerung)",
+    "pv_required":     "PV-Überschussladen",
+    "22kw_required":   "22 kW Ladeleistung",
+    "kabel_required":  "festes Ladekabel",
+    "deutsch":         "deutscher Hersteller",
+    "budget_mid":      "mittleres Budget (unter 800 €)"
+  }
+}

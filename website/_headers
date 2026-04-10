@@ -1,0 +1,31 @@
+# Cloudflare Pages Headers Configuration
+# Format: https://developers.cloudflare.com/pages/configuration/headers/
+
+# Security Headers für alle Seiten
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Lange Cache-Zeit für statische Assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/*.js
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# HTML-Seiten: kurze Cache-Zeit, damit Updates schnell sichtbar sind
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Sitemap und Robots: kurz cachen
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
