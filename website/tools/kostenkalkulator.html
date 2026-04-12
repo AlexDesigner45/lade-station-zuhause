@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallbox Kostenkalkulator 2026 &mdash; Ladestation Zuhause</title>
+  <meta name="description" content="Berechne die Gesamtkosten fuer deine Wallbox: Geraet, Installation, FI-Schutz und Foerderung. Ehrliche Richtwerte statt Werbung.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lade-station-zuhause.de/tools/kostenkalkulator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lade-station-zuhause.de/tools/kostenkalkulator.html">
+  <meta property="og:title" content="Wallbox Kostenkalkulator 2026">
+  <meta property="og:description" content="Berechne die Gesamtkosten fuer deine Wallbox: Geraet, Installation, FI-Schutz und Foerderung. Ehrliche Richtwerte statt Werbung.">
+  <meta property="og:locale" content="de_DE">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Wallbox Gesamtkosten berechnen",
+    "description": "So berechnest du die realistischen Gesamtkosten fuer Wallbox-Kauf und Installation",
+    "step": [
+      { "@type": "HowToStep", "text": "Waehle das Wallbox-Modell nach deinen Anforderungen" },
+      { "@type": "HowToStep", "text": "Schaetze den Kabelweg vom Sicherungskasten zur Wallbox" },
+      { "@type": "HowToStep", "text": "Pruefe ob dein FI-Schutz bereits integriert ist" },
+      { "@type": "HowToStep", "text": "Trage verfuegbare Foerderung ein" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ========================================================================
+     NAVIGATION -- Kanoisch. Aenderungen hier -> alle Seiten aktualisieren.
+     ======================================================================== -->
+<nav class="lz-nav" aria-label="Hauptnavigation">
+  <div class="lz-nav__inner">
+    <a href="../index.html" class="lz-nav__logo">
+      Lade<span class="lz-nav__logo-mark">Station</span>
+    </a>
+    <button class="lz-nav__toggle" aria-label="Menue oeffnen" aria-expanded="false">
+      <span class="lz-nav__toggle-bars"></span>
+    </button>
+    <ul class="lz-nav__menu" role="menu">
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Kaufberater <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../ratgeber/" class="lz-nav__dropdown-link">Uebersicht Kaufberater</a></li>
+          <li><a href="../blog/wallbox-kaufberatung-2026.html" class="lz-nav__dropdown-link">Welche Wallbox passt zu dir?</a></li>
+          <li><a href="../blog/11kw-vs-22kw.html" class="lz-nav__dropdown-link">11 kW oder 22 kW?</a></li>
+          <li><a href="../blog/wallbox-installation-kosten.html" class="lz-nav__dropdown-link">Was kostet eine Wallbox wirklich?</a></li>
+          <li><a href="../tools/kostenkalkulator.html" class="lz-nav__dropdown-link">Kostenkalkulator</a></li>
+        </ul>
+      </li>
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Installation <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../installation/" class="lz-nav__dropdown-link">Uebersicht Installation</a></li>
+          <li><a href="../blog/wallbox-installation-kosten.html" class="lz-nav__dropdown-link">Installationskosten erklaert</a></li>
+          <li><a href="../blog/fi-typ-a-oder-b.html" class="lz-nav__dropdown-link">FI Typ A oder Typ B?</a></li>
+          <li><a href="../blog/wallbox-anmelden-netzbetreiber.html" class="lz-nav__dropdown-link">Wallbox anmelden</a></li>
+          <li><a href="../blog/kabelweg-absicherung.html" class="lz-nav__dropdown-link">Kabelweg &amp; Absicherung</a></li>
+        </ul>
+      </li>
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          PV &amp; Smart <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../pv-smart/" class="lz-nav__dropdown-link">Uebersicht PV &amp; Smart</a></li>
+          <li><a href="../blog/wallbox-pv-ueberschussladen.html" class="lz-nav__dropdown-link">Ueberschussladen: lohnt sich das?</a></li>
+        </ul>
+      </li>
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Recht &amp; Foerderung <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../recht-foerderung/" class="lz-nav__dropdown-link">Uebersicht Recht &amp; Foerderung</a></li>
+          <li><a href="../blog/wallbox-mietrecht-554-bgb.html" class="lz-nav__dropdown-link">Wallbox im Mietrecht (Paragraph 554 BGB)</a></li>
+          <li><a href="../blog/wallbox-weg-eigentuemer.html" class="lz-nav__dropdown-link">Wallbox in der WEG</a></li>
+          <li><a href="../blog/foerderung-2026.html" class="lz-nav__dropdown-link">Foerderung 2026</a></li>
+          <li><a href="../blog/wallbox-versicherung-haftung.html" class="lz-nav__dropdown-link">Versicherung &amp; Haftung</a></li>
+        </ul>
+      </li>
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Wallbox-Tests <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../wallbox-tests/" class="lz-nav__dropdown-link">Uebersicht Tests &amp; Vergleiche</a></li>
+          <li><a href="../blog/go-e-vs-heidelberg-vs-abl.html" class="lz-nav__dropdown-link">go-eCharger vs. Heidelberg vs. ABL</a></li>
+        </ul>
+      </li>
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Auto-Ratgeber <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../auto-ratgeber/" class="lz-nav__dropdown-link">Uebersicht Auto-Ratgeber</a></li>
+          <li><a href="../blog/wallbox-vw-id3-id4.html" class="lz-nav__dropdown-link">VW ID.3 / ID.4</a></li>
+          <li><a href="../blog/wallbox-tesla-model-3-y.html" class="lz-nav__dropdown-link">Tesla Model 3 / Y</a></li>
+          <li><a href="../blog/wallbox-bmw-ix-i4.html" class="lz-nav__dropdown-link">BMW iX / i4</a></li>
+          <li><a href="../blog/wallbox-plug-in-hybrid.html" class="lz-nav__dropdown-link">Plug-in-Hybrid</a></li>
+        </ul>
+      </li>
+      <li><a href="../ueber-uns.html" class="lz-nav__link">Ueber uns</a></li>
+      <li><a href="../index.html#konfigurator" class="lz-btn lz-btn--primary lz-btn--sm lz-nav__cta">Quiz starten</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="lz-page-hero lz-nav--scrolled">
+  <div class="lz-container">
+    <nav aria-label="Breadcrumb" class="lz-breadcrumb">
+      <span class="lz-breadcrumb__item"><a href="../index.html" class="lz-breadcrumb__link">Startseite</a></span>
+      <span class="lz-breadcrumb__item"><a href="../ratgeber/" class="lz-breadcrumb__link">Kaufberater</a></span>
+      <span class="lz-breadcrumb__item"><span class="lz-breadcrumb__current">Kostenkalkulator</span></span>
+    </nav>
+    <p class="lz-page-hero__eyebrow">Tool</p>
+    <h1 class="lz-page-hero__title">Wallbox Kostenkalkulator</h1>
+    <p class="lz-page-hero__desc">Richtwerte fuer Geraet, Installation und Foerderung -- damit du weisst, was es wirklich kostet.</p>
+  </div>
+</header>
+
+<main>
+  <section class="lz-section">
+    <div class="lz-container">
+      <form id="lz-kalkulator" class="lz-tool">
+        <p class="lz-tool__desc">Stand: April 2026 &middot; Alle Angaben sind Richtwerte, kein verbindliches Angebot.</p>
+
+        <div class="lz-tool__group">
+          <label for="kalk-wallbox" class="lz-tool__label">Wallbox-Typ <span class="lz-tool__label-hint">(was brauchst du?)</span></label>
+          <select id="kalk-wallbox" class="lz-tool__select">
+            <option value="einfach">Einfache 11-kW-Wallbox (z.B. ABL eMH1) -- ca. 399 &euro;</option>
+            <option value="mittel" selected>Mittelklasse 11 kW (z.B. go-eCharger, KEBA) -- ca. 699 &euro;</option>
+            <option value="smart">Smart Wallbox mit PV-Integration -- ca. 999 &euro;</option>
+            <option value="premium">Premium 22-kW-Wallbox -- ca. 1.299 &euro;</option>
+          </select>
+        </div>
+
+        <div class="lz-tool__group">
+          <label for="kalk-installation" class="lz-tool__label">Kabelweg <span class="lz-tool__label-hint">(Distanz Sicherungskasten zur Wallbox)</span></label>
+          <select id="kalk-installation" class="lz-tool__select">
+            <option value="kurz">Kurz (unter 5 m, z.B. Garage direkt am Haus)</option>
+            <option value="mittel" selected>Mittel (5-15 m)</option>
+            <option value="lang">Lang (ueber 15 m)</option>
+            <option value="erdkabel">Erdkabel / Garage aussen (Gartenweg, Einfahrt)</option>
+          </select>
+        </div>
+
+        <div class="lz-tool__group">
+          <label for="kalk-fi" class="lz-tool__label">FI-Schutz <span class="lz-tool__label-hint">(Fehlerstromschutz)</span></label>
+          <select id="kalk-fi" class="lz-tool__select">
+            <option value="integriert">In Wallbox integriert (z.B. go-eCharger, Heidelberg)</option>
+            <option value="typ-a" selected>FI Typ A extern noetig (ca. +80 &euro;)</option>
+            <option value="typ-b">FI Typ B noetig (aeltere Wallbox, ca. +280 &euro;)</option>
+          </select>
+        </div>
+
+        <div class="lz-tool__group">
+          <label for="kalk-foerderung" class="lz-tool__label">Verfuegbare Foerderung</label>
+          <select id="kalk-foerderung" class="lz-tool__select">
+            <option value="keine" selected>Keine bekannte Foerderung</option>
+            <option value="stadtwerke">Stadtwerke / Netzbetreiber (ca. 200 &euro;)</option>
+            <option value="land">Bundeslandprogramm (ca. 500 &euro;)</option>
+            <option value="arbeitgeber">Arbeitgeber-Zuschuss (ca. 500 &euro;)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="lz-btn lz-btn--primary">Kosten berechnen</button>
+
+        <div id="lz-kalkulator-result" class="lz-tool__result">
+          <p class="lz-tool__result-title">Deine geschaetzten Gesamtkosten</p>
+          <div class="lz-tool__result-row">
+            <span class="lz-tool__result-label">Wallbox (Geraet)</span>
+            <span class="lz-tool__result-value" id="kalk-r-wallbox">&mdash;</span>
+          </div>
+          <div class="lz-tool__result-row">
+            <span class="lz-tool__result-label">Installation (Elektriker)</span>
+            <span class="lz-tool__result-value" id="kalk-r-install">&mdash;</span>
+          </div>
+          <div class="lz-tool__result-row">
+            <span class="lz-tool__result-label">FI-Schutz</span>
+            <span class="lz-tool__result-value" id="kalk-r-fi">&mdash;</span>
+          </div>
+          <div class="lz-tool__result-row">
+            <span class="lz-tool__result-label">Foerderung</span>
+            <span class="lz-tool__result-value" id="kalk-r-foerderung">&mdash;</span>
+          </div>
+          <div class="lz-tool__result-total">
+            <span class="lz-tool__result-total-label">Gesamt (Richtwert)</span>
+            <span class="lz-tool__result-total-value" id="kalk-r-total">&mdash;</span>
+          </div>
+        </div>
+
+        <p class="lz-tool__disclaimer">
+          Richtwerte, keine Garantie. Tatsaechliche Kosten variieren je nach Region, Elektriker und Hausstatus.
+          Details: <a href="../blog/wallbox-installation-kosten.html">Wallbox-Installationskosten erklaert</a>.
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="lz-footer">
+  <div class="lz-footer__inner">
+    <div class="lz-footer__grid">
+      <div>
+        <div class="lz-footer__brand">Lade<span class="lz-footer__brand-mark">Station</span></div>
+        <p class="lz-footer__tagline">Wallbox-Beratung ohne Verkaeufer-Sprueche.</p>
+        <p class="lz-footer__disclaimer">Transparenz: Wir verdienen an qualifizierten Kaeufen ueber Amazon-Links. Das beeinflusst unsere Bewertung nicht.</p>
+      </div>
+      <div>
+        <p class="lz-footer__heading">Ratgeber</p>
+        <ul class="lz-footer__links">
+          <li><a href="../ratgeber/">Kaufberater</a></li>
+          <li><a href="../installation/">Installation</a></li>
+          <li><a href="../pv-smart/">PV &amp; Smart</a></li>
+          <li><a href="../recht-foerderung/">Recht &amp; Foerderung</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="lz-footer__heading">Ueber</p>
+        <ul class="lz-footer__links">
+          <li><a href="../ueber-uns.html">Ueber uns</a></li>
+          <li><a href="../kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="lz-footer__heading">Rechtliches</p>
+        <ul class="lz-footer__links">
+          <li><a href="../impressum.html">Impressum</a></li>
+          <li><a href="../datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="lz-footer__bottom">
+      <p>&copy; 2026 Ladestation Zuhause &middot; Aleksej Debus, Kitzingen</p>
+      <p>Stand: 12. April 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../nav.js"></script>
+<script src="./kostenkalkulator.js"></script>
+</body>
+</html>
