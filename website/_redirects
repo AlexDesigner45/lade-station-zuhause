@@ -2,7 +2,15 @@
 # Format: https://developers.cloudflare.com/pages/configuration/redirects/
 # Hinweis: Nur relative URLs erlaubt. WWW→Apex wird über Cloudflare DNS-CNAME gelöst.
 
-# Alte URLs (Platzhalter für spätere Migrationen)
+# Alte URLs (Platzhalter fuer spaetere Migrationen)
 # /alt-url /neu-url 301
 
-# 404-Handling: Cloudflare erkennt 404.html automatisch — kein Eintrag nötig.
+# 404-Handling: Cloudflare erkennt 404.html automatisch -- kein Eintrag noetig.
+
+# Hub-Seiten: Trailing-Slash-Redirects (ohne Slash -> mit Slash)
+/ratgeber           /ratgeber/          301
+/installation       /installation/      301
+/pv-smart           /pv-smart/          301
+/recht-foerderung   /recht-foerderung/  301
+/wallbox-tests      /wallbox-tests/     301
+/auto-ratgeber      /auto-ratgeber/     301

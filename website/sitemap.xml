@@ -50,6 +50,138 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Hub-Seiten -->
+  <url>
+    <loc>https://lade-station-zuhause.de/ratgeber/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/installation/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/pv-smart/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/recht-foerderung/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/wallbox-tests/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/auto-ratgeber/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Neue Artikel: Installation -->
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/fi-typ-a-oder-b.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-anmelden-netzbetreiber.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/kabelweg-absicherung.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Neue Artikel: Recht & Foerderung -->
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-mietrecht-554-bgb.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-weg-eigentuemer.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/foerderung-2026.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-versicherung-haftung.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Neue Artikel: Auto-Ratgeber -->
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-vw-id3-id4.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-tesla-model-3-y.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-bmw-ix-i4.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lade-station-zuhause.de/blog/wallbox-plug-in-hybrid.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tool -->
+  <url>
+    <loc>https://lade-station-zuhause.de/tools/kostenkalkulator.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Statische Seiten -->
   <url>
     <loc>https://lade-station-zuhause.de/ueber-uns.html</loc>
     <lastmod>2026-04-10</lastmod>
