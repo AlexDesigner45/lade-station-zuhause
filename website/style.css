@@ -480,7 +480,7 @@ p {
   transform: translateY(0) rotate(-45deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
   .lz-nav__menu {
     position: fixed;
     top: var(--lz-nav-h);
@@ -2980,6 +2980,7 @@ p {
     /* Hover deaktivieren auf Mobile */
     max-height: 0;
     opacity: 0;
+    visibility: hidden;
   }
 
   .lz-nav__item--dropdown:hover .lz-nav__dropdown-trigger[aria-expanded="true"] + .lz-nav__dropdown {
