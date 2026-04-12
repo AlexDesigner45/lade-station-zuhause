@@ -84,20 +84,98 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="lz-nav lz-nav--scrolled" aria-label="Hauptnavigation">
-    <div class="lz-nav__inner">
-      <a href="../index.html" class="lz-nav__logo">Lade<span class="lz-nav__logo-mark">Station</span></a>
-      <button class="lz-nav__toggle" aria-label="Menü öffnen" aria-expanded="false"><span class="lz-nav__toggle-bars"></span></button>
-      <ul class="lz-nav__menu" role="menu">
-        <li><a href="../index.html#konfigurator" class="lz-nav__link">Konfigurator</a></li>
-        <li><a href="../index.html#vergleich" class="lz-nav__link">Wallboxen</a></li>
-        <li><a href="../index.html#ratgeber" class="lz-nav__link">Ratgeber</a></li>
-        <li><a href="../blog.html" class="lz-nav__link lz-nav__link--active">Blog</a></li>
-        <li><a href="../ueber-uns.html" class="lz-nav__link">Über uns</a></li>
-        <li><a href="../index.html#konfigurator" class="lz-btn lz-btn--primary lz-btn--sm lz-nav__cta">Konfigurator starten</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- ========================================================================
+     NAVIGATION -- Kanonisch. Aenderungen hier -> alle Seiten aktualisieren.
+     ======================================================================== -->
+<nav class="lz-nav" aria-label="Hauptnavigation">
+  <div class="lz-nav__inner">
+    <a href="../index.html" class="lz-nav__logo">
+      Lade<span class="lz-nav__logo-mark">Station</span>
+    </a>
+
+    <button class="lz-nav__toggle" aria-label="Menue oeffnen" aria-expanded="false">
+      <span class="lz-nav__toggle-bars"></span>
+    </button>
+
+    <ul class="lz-nav__menu" role="menu">
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Kaufberater <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../ratgeber/" class="lz-nav__dropdown-link">Uebersicht Kaufberater</a></li>
+          <li><a href="../blog/wallbox-kaufberatung-2026.html" class="lz-nav__dropdown-link">Welche Wallbox passt zu dir?</a></li>
+          <li><a href="../blog/11kw-vs-22kw.html" class="lz-nav__dropdown-link">11 kW oder 22 kW?</a></li>
+          <li><a href="../blog/wallbox-installation-kosten.html" class="lz-nav__dropdown-link">Was kostet eine Wallbox wirklich?</a></li>
+          <li><a href="../tools/kostenkalkulator.html" class="lz-nav__dropdown-link">Kostenkalkulator</a></li>
+        </ul>
+      </li>
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Installation <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../installation/" class="lz-nav__dropdown-link">Uebersicht Installation</a></li>
+          <li><a href="../blog/wallbox-installation-kosten.html" class="lz-nav__dropdown-link">Installationskosten erklaert</a></li>
+          <li><a href="../blog/fi-typ-a-oder-b.html" class="lz-nav__dropdown-link">FI Typ A oder Typ B?</a></li>
+          <li><a href="../blog/wallbox-anmelden-netzbetreiber.html" class="lz-nav__dropdown-link">Wallbox anmelden</a></li>
+          <li><a href="../blog/kabelweg-absicherung.html" class="lz-nav__dropdown-link">Kabelweg &amp; Absicherung</a></li>
+        </ul>
+      </li>
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          PV &amp; Smart <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../pv-smart/" class="lz-nav__dropdown-link">Uebersicht PV &amp; Smart</a></li>
+          <li><a href="../blog/wallbox-pv-ueberschussladen.html" class="lz-nav__dropdown-link">Ueberschussladen: lohnt sich das?</a></li>
+        </ul>
+      </li>
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Recht &amp; Foerderung <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../recht-foerderung/" class="lz-nav__dropdown-link">Uebersicht Recht &amp; Foerderung</a></li>
+          <li><a href="../blog/wallbox-mietrecht-554-bgb.html" class="lz-nav__dropdown-link">Wallbox im Mietrecht (Paragraph 554 BGB)</a></li>
+          <li><a href="../blog/wallbox-weg-eigentuemer.html" class="lz-nav__dropdown-link">Wallbox in der WEG</a></li>
+          <li><a href="../blog/foerderung-2026.html" class="lz-nav__dropdown-link">Foerderung 2026</a></li>
+          <li><a href="../blog/wallbox-versicherung-haftung.html" class="lz-nav__dropdown-link">Versicherung &amp; Haftung</a></li>
+        </ul>
+      </li>
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Wallbox-Tests <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../wallbox-tests/" class="lz-nav__dropdown-link">Uebersicht Tests &amp; Vergleiche</a></li>
+          <li><a href="../blog/go-e-vs-heidelberg-vs-abl.html" class="lz-nav__dropdown-link">go-eCharger vs. Heidelberg vs. ABL</a></li>
+        </ul>
+      </li>
+
+      <li class="lz-nav__item lz-nav__item--dropdown">
+        <button class="lz-nav__link lz-nav__dropdown-trigger" aria-expanded="false">
+          Auto-Ratgeber <span class="lz-nav__chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="lz-nav__dropdown" role="menu">
+          <li><a href="../auto-ratgeber/" class="lz-nav__dropdown-link">Uebersicht Auto-Ratgeber</a></li>
+          <li><a href="../blog/wallbox-vw-id3-id4.html" class="lz-nav__dropdown-link">VW ID.3 / ID.4</a></li>
+          <li><a href="../blog/wallbox-tesla-model-3-y.html" class="lz-nav__dropdown-link">Tesla Model 3 / Y</a></li>
+          <li><a href="../blog/wallbox-bmw-ix-i4.html" class="lz-nav__dropdown-link">BMW iX / i4</a></li>
+          <li><a href="../blog/wallbox-plug-in-hybrid.html" class="lz-nav__dropdown-link">Plug-in-Hybrid</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../ueber-uns.html" class="lz-nav__link">Ueber uns</a></li>
+      <li><a href="../index.html#konfigurator" class="lz-btn lz-btn--primary lz-btn--sm lz-nav__cta">Quiz starten</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Hero -->
   <header class="lz-page-hero">
