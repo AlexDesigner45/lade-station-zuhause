@@ -54,11 +54,11 @@
   --lz-border-str:    #cbd5e1;
   --lz-border-inv:    rgba(255, 255, 255, 0.12);
 
-  /* ---------- Accent (Teal — "Modern Petrol") ---------- */
-  --lz-accent:          #0d9488;
-  --lz-accent-hover:    #0f766e;
-  --lz-accent-subtle:   rgba(13, 148, 136, 0.08);
-  --lz-accent-muted:    rgba(13, 148, 136, 0.16);
+  /* ---------- Accent (Electric Orange — "Charge") ---------- */
+  --lz-accent:          #f97316;
+  --lz-accent-hover:    #ea580c;
+  --lz-accent-subtle:   rgba(249, 115, 22, 0.08);
+  --lz-accent-muted:    rgba(249, 115, 22, 0.16);
   --lz-accent-contrast: #ffffff;
 
   /* ---------- Semantic Colors ---------- */
@@ -92,7 +92,7 @@
   --lz-sh:            0 4px 16px rgba(15, 23, 42, 0.06);
   --lz-sh-md:         0 8px 32px rgba(15, 23, 42, 0.08);
   --lz-sh-lg:         0 16px 48px rgba(15, 23, 42, 0.12);
-  --lz-sh-accent:     0 8px 24px rgba(13, 148, 136, 0.22);
+  --lz-sh-accent:     0 8px 24px rgba(249, 115, 22, 0.22);
 
   /* ---------- Spacing ---------- */
   --lz-sp-xs:         8px;
@@ -3274,4 +3274,13 @@ p {
 
 .lz-hub-card--tool {
   border-left: 3px solid var(--lz-accent);
+}
+
+/* Dropdown-Trenner (z.B. Kaufberater | Auto-Ratgeber) */
+.lz-nav__dropdown-sep {
+  height: 1px;
+  background: var(--lz-border);
+  margin: 4px 8px;
+  padding: 0;
+  list-style: none;
 }
