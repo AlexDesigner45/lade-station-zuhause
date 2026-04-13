@@ -863,6 +863,64 @@ p {
 }
 
 /* ==========================================================================
+   8b. STATS BAND (Kennzahlen-Streifen)
+   ========================================================================== */
+.lz-stats {
+  padding: 40px 0;
+  background: var(--lz-bg-inverse);
+}
+
+.lz-stats__inner {
+  max-width: var(--lz-container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.lz-stats__item {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 24px;
+  text-align: center;
+}
+
+.lz-stats__value {
+  font-family: var(--lz-font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: var(--lz-accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.lz-stats__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(248, 250, 252, 0.65);
+  line-height: 1.4;
+  max-width: 120px;
+}
+
+.lz-stats__divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .lz-stats__divider { display: none; }
+  .lz-stats__item { flex: 1 1 40%; }
+}
+
+/* ==========================================================================
    9. TAGS, BADGES, PILLS
    ========================================================================== */
 .lz-tag {
