@@ -222,7 +222,7 @@
              '<div class="lz-quiz__result-list">' + items + '</div>' +
              '<div class="lz-quiz__nav">' +
                '<button class="lz-btn lz-btn--ghost lz-btn--sm" data-action="restart">&#x21BB; Quiz neu starten</button>' +
-               '<a href="#vergleich" class="lz-btn lz-btn--secondary lz-btn--sm">Alle 12 Modelle vergleichen</a>' +
+               '<a href="#vergleich" class="lz-btn lz-btn--secondary lz-btn--sm">Alle Wallboxen vergleichen</a>' +
              '</div>' +
            '</div>';
   }
@@ -267,7 +267,7 @@
                '<div class="lz-quiz__result-reason">' + escape(reasonLine) + '</div>' +
                missingLine +
              '</div>' +
-             '<a href="#produkte" class="lz-btn ' + (isTop ? 'lz-btn--primary' : 'lz-btn--secondary') + ' lz-btn--sm">Details</a>' +
+             '<a href="' + escape(p.link || '#vergleich') + '" class="lz-btn ' + (isTop ? 'lz-btn--primary' : 'lz-btn--secondary') + ' lz-btn--sm" ' + (p.link && p.link.startsWith('http') ? 'target="_blank" rel="nofollow sponsored noopener"' : '') + '>Details</a>' +
            '</div>';
   }
 
