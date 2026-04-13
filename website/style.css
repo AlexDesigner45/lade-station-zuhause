@@ -2878,12 +2878,8 @@ p {
   font-size: inherit;
   cursor: pointer;
   padding: 6px 4px;
-  color: var(--lz-text-inverse);
+  color: var(--lz-text-body);
   transition: color var(--lz-duration) var(--lz-ease);
-}
-
-.lz-nav--scrolled .lz-nav__dropdown-trigger {
-  color: var(--lz-text);
 }
 
 .lz-nav__dropdown-trigger:hover,
@@ -2908,7 +2904,7 @@ p {
 
 .lz-nav__dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 240px;
@@ -2916,7 +2912,8 @@ p {
   border: 1px solid var(--lz-border);
   border-radius: var(--lz-r-lg);
   box-shadow: var(--lz-sh-lg);
-  padding: 8px;
+  padding: 16px 8px 8px; /* 16px oben schliesst den visuellen Gap */
+  margin-top: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
